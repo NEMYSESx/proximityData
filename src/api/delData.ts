@@ -4,10 +4,6 @@ import { Request, Response } from "express";
 export const delData = async (req: Request, res: Response) => {
   const { socketId } = req.body as { socketId: string };
 
-  if (!socketId) {
-    return res.status(400).json({ error: "socketId is required" });
-  }
-
   try {
     const result = await db.user.delete({
       where: {
