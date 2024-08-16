@@ -10,7 +10,7 @@ app.use(
 );
 app.use(express.json());
 
-app.get("/getData", getData);
+app.post("/getData", getData);
 app.post("/putData", putData);
 
 app.listen(3000, () => {
